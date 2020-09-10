@@ -1,0 +1,41 @@
+# Dev-Bookshelf
+![Made with love by 8luebottle](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8Fby-%208luebottle%20-blue)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F8luebottle%2FDev-Bookshelf&count_bg=%23A9139A&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
+
+## 📌 Commit Message Convention  
+`<flagOfAvailableLanguages> MM.DD.YYYY : <bookTitle>`
+
+**e.g,** `🇺🇸 09.11.2020 : CODE`
+
+## 📌 Table Format  
+
+|   Title  |  Author  |Last Updated|
+|----------|----------| :--------: |
+|Book Title|AuthorName| MM.DD.YYYY |
+
+### 📄 Table of Contents
+* [A](#a)
+* [B](#b)
+* [C](#c)
+    ```
+    ├── CODE
+    ├── Clean Architecture
+    └── Clean Code
+    ```
+
+
+# 🗂 Sections
+
+## A
+## B
+## C
+![section-c](https://user-images.githubusercontent.com/48475824/92779124-bf88f500-f3dc-11ea-9b7b-de1dabf55d09.png)
+
+| Title            |       Author      |Last Updated|
+|------------------|:-----------------:| :--------: |
+|CODE              |Charles Petzold    ||
+|Clean Architecture|Robert Cecil Martin||
+|Clean Code        |Robert Cecil Martin|| 
+
+[↑ return to TOC](#table-of-contents)
