@@ -36,6 +36,6 @@
 |------------------|:-----------------:| :--------: |
 |CODE              |Charles Petzold    ||
 |Clean Architecture|Robert Cecil Martin||
-|Clean Code        |Robert Cecil Martin|| 
+|[Clean Code](https://github.com/8luebottle/Dev-Bookshelf/blob/main/Clean_Code.md)|Robert Cecil Martin|11.15.2020| 
 
 [↑ return to TOC](#table-of-contents)
