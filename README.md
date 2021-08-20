@@ -40,7 +40,7 @@
 |------------------|:-----------------:| :--------: |
 |CODE              |Charles Petzold    ||
 |Clean Architecture|Robert Cecil Martin||
-|[Clean Code](https://github.com/8luebottle/Dev-Bookshelf/blob/main/Clean_Code.md)|Robert Cecil Martin|11.15.2020| 
+|[Clean Code](./Clean_Code.md)|Robert Cecil Martin|11.15.2020|
 
 [↑ return to TOC](#table-of-contents)
 
@@ -49,4 +49,4 @@
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
-|System Design Interview|Alex Xu||
+|[System Design Interview](./System_Design_Interview.md)|Alex Xu|08.20.2021|
