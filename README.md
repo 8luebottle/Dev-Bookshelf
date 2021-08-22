@@ -15,8 +15,6 @@
 |Book Title|AuthorName| MM.DD.YYYY |
 
 ### 📄 Table of Contents
-* [A](#a)
-* [B](#b)
 * [C](#c)
     ```
     ├── CODE
@@ -31,8 +29,6 @@
 
 # 🗂 Sections
 
-## A
-## B
 ## C
 ![section-c](https://user-images.githubusercontent.com/48475824/92779124-bf88f500-f3dc-11ea-9b7b-de1dabf55d09.png)
 
@@ -49,4 +45,4 @@
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
-|[System Design Interview](./System_Design_Interview.md)|Alex Xu|08.20.2021|
+|[System Design Interview](./System_Design_Interview.md)|Alex Xu|08.22.2021|
