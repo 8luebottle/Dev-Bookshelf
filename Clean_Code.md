@@ -9,7 +9,7 @@ Clean Code : A Handbook of Agile Software Craftmanship
 |Chapter|       Title      | Page  |   Date   |
 |-------|:----------------:|:-----:|:--------:|
 |01     |깨끗한 코드          |001-020|07.27.2020|
-|02     |의미 있는 이름       |021-038|08.03.2020|
+|[02](#2)|의미 있는 이름       |021-038|08.03.2020|
 |[03](#3)|함수               |039-065|08.10.2020|
 |04     |주석               |067-094|08.24.2020|
 |[05](#5)|형식 맞추기          |095-114|08.31.2020|
@@ -26,6 +26,236 @@ Clean Code : A Handbook of Agile Software Craftmanship
 |16     |SerialDate 리팩터링 |343-365|---Skip---|
 |[17](#17)|냄새와 휴리스틱      |367-406|11.09.2020|
 ---
+# 2
+## 의미 있는 이름
+> Meaningful Names
+
+프로그래머는 코드를 최대한 이해하기 쉽게 짜야 한다. 대충 훑어봐도 이해할 코드 작성이 목표다.  
+이해하기 쉬운 코드를 짜기 위해서는 의미 있는 이름을 지을 수 있어야 한다.
+
+### **좋은 이름이 가진 5가지 특징 | SMART**
+
+|||
+|----|----|
+|easy to **S**earch|검색하기 쉬움|
+|easy to **M**ix|조합하기 쉬움|
+|easy to **A**gree|수긍하기 쉬움|
+|easy to **R**emember|기억하기 쉬움|
+|easy to **T**ype|입력하기 쉬움|
+
+<br>
+
+#### Dos
+
+<details><summary>의도를 분명히 밝혀라</summary>
+
+좋은 이름으로 인해 절약하는 시간 > 좋은 이름을 짓기 위해 공들인 시간
+
+좋은 이름을 짓기  위해 자신에게 물어볼 질문 List
+
+- 사용 방법은 ?
+- 변수명 | 변수의 존재 이유는 ?
+- 함수명 | 수행 기능은 ?
+
+```java
+// 분명하지 못한 의도 
+public List<int []> getThem() {
+    List<int[]> list1 = new ArrayList<int[]>();
+    for (int[] x : theList)
+        if (x[0] == 4)
+            list1.add(x);
+    return list1
+}
+```
+
+```java
+// 분명한 의도
+public List<Cell> getFlaggedCells(){
+    List<Cell> flaggedCells = new ArrayList<Cell>();
+        for(Cell cell : gameBoard)
+           if (cell[STATUS_VALUE] == FLAGGED)
+               flaggedCells.add(cell);
+    return flaggedCells;
+}
+```
+
+```
+ getThem 👉  getFlaggedCells  
+<int []> 👉   <cell>
+  list1  👉  flaggedCells
+      x  👉  cell
+ theList 👉  gameBoard
+       0 👉  STATUS_VALUE
+       4 👉  FLAGGED
+```
+
+</details>
+
+<details><summary>의미 있게 구분하라</summary>
+
+의미 없는 이름의 예)
+
+- array1, array2....arrayN
+
+    위의 이름은 아무런 정보를 제공해 주지 않는다. 단지 array 라고만 알 뿐
+
+- money 그리고 moneyAmount
+
+    두 변수의 의미가 서로 확연히 구분이 되지 않는다. 둘의 차이는 무엇인가?
+
+</details>
+
+<details><summary>발음하기 쉬운 이름을 사용하라</summary>
+
+genymdhms (X)
+
+generationTimestamp (O)
+
+```java
+// 발음하기 어려운
+class DtaRcrd102 {
+    private Date genymdhms;
+    private Date modymdhms;
+    private final String pszqint = “102”;
+    /*...*/
+};
+```
+
+```java
+// 발음하기 쉬운
+class Customer {
+    private Date generationTimestamp;
+    private Date modificationTimestamp;
+    private final String recordId = “102”;
+    /*...*/
+};
+```
+
+</details>
+
+<details><summary>검색하기 쉬운 이름을 사용하라</summary>
+
+변수나 상수를 코드 여러 곳에서 사용한다면 검색하기 쉬운 이름을 사용하자.
+
+검색하기 쉬운 이름이 상수보다 좋다.
+
+한 클래스에 최대 7명의 학생을 받을 수 있는 상황일때 명명법.
+
+- (X) 7
+- (O) MAX_CLASSES_PER_STUDENT
+
+</details>
+
+<details><summary>한 개념에 한 단어를 사용하라</summary>
+
+controller == manager == driver 는 동일한 의미를 갖고 있다.
+
+위의 세가지가 코드에 모두 보이도록 하는것은 혼란만 가중시킨다.
+
+일관성을 위해 한 개념에는 한 단어를 정하여 사용할 것.
+
+</details>
+
+<details><summary>해법 영역에서 가져온 이름을 사용하라</summary>
+
+'프로그래머간에 익숙한 기술 개념 용어'를 이름으로 사용해도 무방하다.
+
+</details>
+
+<details><summary>문제 영역에서 가져온 이름을 사용하라</summary>
+
+적절한 ‘프로그래머 용어’가 없다면 문제 영역에서 이름을 가져와도 된다.
+
+</details>
+
+<details><summary>의미 있는 맥락을 추가하라</summary>
+
+접두어를 붙이는 방법이 있다.
+
+- 예)
+
+    firstName, lastName, street, houseNumber, city, state, zipcode 라는 변수가 있다. 
+
+    변수를 훑어보면 주소라는 사실을 금방 알아챈다. 하지만 어느 메서드가 state라는 변수 하나만 사용한다면? 변수 state가 주소 일부라는 사실을 금방 알아챌까?
+
+    - Solution ⇒ addr 라는 접두어를 추가해
+
+        addrFirstName, addrLastName, addrState라 쓰면 맥락이 좀 더 분명해진다.
+
+</details>
+
+<br>
+
+#### DON'Ts
+
+<details><summary>그릇된 정보를 피하라</summary>
+
+코드가 그릇된 정보를 전달 해서는 안된다.
+
+accountList (X)
+
+여러 계정을 그룹으로 묶을 때, 실제 List가 아니라면, accountList 라 명명하지 않는다.
+
+- 프로그래머에게 List라는 단어는 특수한 의미다. 계정을 담는 컨테이너가 실제 List가 아니라면 프로그래머에게 그릇된 정보를 제공하는 셈
+
+    보다 나은 이름
+
+    - accountGroup
+    - bunchOfAccount
+
+무엇보다도 일관된 표기법을 지킬 것!
+
+</details>
+
+<details><summary>인코딩을 피하라</summary>
+
+문제 해결에 집중하는 개발자에게 인코딩은 불필요한 정신적 부담이다.  
+인코딩한 이름은 거의가 발음하기 어려우며 오타가 생기기도 쉽다.
+
+</details>
+
+<details><summary>자신의 기억력을 자랑하지 마라</summary>
+
+의미가 전달이 되지 않는 이름을 사용한다면 기억하기 어렵다.
+
+문자 하나만 사용하는 변수 이름은 문제가 있다.
+
+- 하지만... 모든 프로그래머에게 통용되는 아래와 같은 케이스는 괜찮다.
+
+    루프에서 반복 횟수를 세는 i, j, k 
+
+    단, 루프 범위가 아주 작고 다른 이름과 충돌하지 않을 때만 괜찮다.  
+    루프에서 반복 횟수 변수는 전통적으로 한 글자를 사용하기 때문이다.
+
+그 외에는 대부분 적절하지 못하다.
+
+</details>
+
+<details><summary>기발한 이름은 피하라</summary>
+
+재미난 이름보다 명료한 이름을 선택하라.
+
+특정 문화에서만 사용하는 농담은 피하라. 
+
+의도를 분명하고 솔직하게 표현하라.
+
+</details>
+
+<details><summary>말장난을 하지 마라</summary>
+
+한 단어를 두 가지 목적으로 사용하는 것은 말장난에 불과하다.
+
+</details>
+
+<details><summary>불필요한 맥락을 없애라</summary>
+
+“고급 휘발유 충전소(Gas Station Deluxe)”라는 앱을 짠다고 했을 때 모든 클래스 이름을 GSD로 시작하겠다는 것은 전혀 바람직하지 못하다.
+
+일반적으로는 짧은 이름이 긴 이름보다 좋다. 단, 의미가 분명한 경우에 한해서!
+
+</details>
+
+
 # 3
 ## 함수
 > Functions
