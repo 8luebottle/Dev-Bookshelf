@@ -31,6 +31,19 @@ Clean Code : A Handbook of Agile Software Craftmanship
 ## 창발성
 > Emergence
 
+### **단순한 설계규칙**
+
+중요한 순서대로 나열한 다음의 네가지 규칙을 따른다면 우수한 설계를 구현시킨 코드를 작성할 수 있다.
+
+**Kent Beck’s 4 Rules of Simple Design** 
+
+1. **모든 테스트를 실행한다.**
+2. **중복을 없앤다.**  
+    리팩터링을 통한 중복 없애기
+
+3. **프로그래머 의도를 표현한다.**
+4. **클래스와 메서드 수를 최소로 줄인다.**
+
 <details><summary>모든 테스트를 실행하라</summary>  
 
 테스트를 통해 얻고자 하는 것은 무엇인가 ?  
