@@ -36,7 +36,7 @@
 |------------------|:-----------------:| :--------: |
 |CODE              |Charles Petzold    ||
 |Clean Architecture|Robert Cecil Martin||
-|[Clean Code](./Clean_Code.md)|Robert Cecil Martin|08.22.2021|
+|[Clean Code](./Clean_Code.md)|Robert Cecil Martin|08.29.2021|
 
 [↑ return to TOC](#table-of-contents)
 
