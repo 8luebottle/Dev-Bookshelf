@@ -26,6 +26,186 @@ Clean Code : A Handbook of Agile Software Craftmanship
 |16     |SerialDate 리팩터링 |343-365|---Skip---|
 |[17](#17)|냄새와 휴리스틱      |367-406|11.09.2020|
 ---
+# 5
+## 형식 맞추기
+> Formatting
+
+핵심 : 팀 단위로 통일된 규칙과 형식을 맞추어 깔끔한 코드를 짜내야 한다.
+- 줄 바꿈 == 개념 분리
+- 세로 밀집도 == 연관성
+
+<details><summary>형식을 맞추는 목적</summary>
+
+프로그래머는 코드를 통해 의사소통을 한다.
+
+코드를 통하여 원활한 소통을 하기 위해서는 아래의 항목을 염두에 두어야 한다.
+
+- 적절한 행 길이 유지
+- 신문 기사처럼 작성
+- 개념은 빈 행으로 분리
+- 세로 밀집도
+- 수직 거리
+- 변수 선언 위치
+- 가로 형식 맞추기
+- 가로 공백과 밀집도
+- 가로 정렬
+- 들여 쓰기
+
+위의 항목들을 하단에서 더 자세히 알아보자.
+
+</details>
+
+<details><summary>적절한 행 길이를 유지하라</summary>
+
+**신문 기사처럼 작성하라**
+
+신문 기사처럼 작성한다는 것은 무엇일까?  
+어느 나라던지 신문기사는 아래와 같은 특징을 지니고 있다.
+
+- 위에서 아래로
+- 상단에 위치한 요약된 표제
+- 첫 문단은 기사 내용의 요약
+- 다음 문단은 세부사항
+
+이를 소스 코드에 빗대어 보자.
+
+- 위에서 아래로
+
+   ```java
+   public String parameterToString(Object param) {
+      if (param == null) {
+         return "";
+      } else if (param instanceof Date || param instanceof DateTime || param instanceof LocalDate) {
+         // Serialize to json string and remove the " enclosing characters
+         String jsonStr = json.serialize(param);
+         return jsonStr.substring(1, jsonStr.length() - 1);
+      } else if (param instanceof Collection) {
+         StringBuilder b = new StringBuilder();
+         for (Object o : (Collection) param) {
+         if (b.length() > 0) {
+            b.append(",");
+         }
+         b.append(String.valueOf(o));
+         }
+         return b.toString();
+      } else {
+         return String.valueOf(param);
+      }
+   }
+   ```
+
+- 상단에 위치한 표제
+
+   ```java
+   // 간단하고 설명 가능한 이름.
+   public String parameterToString(Object param)
+   ```
+
+- 첫 문단은 기사 내용의 요약
+
+   ```java
+   if (param == null)
+   ```
+
+- 다음 문단은 세부 사항
+
+   ```java
+   // 세부 내역
+   if (param == null){
+         return "";
+      } else if (param instanceof Date || param instanceof DateTime || param instanceof LocalDate) {
+         // Serialize to json string and remove the " enclosing characters
+         String jsonStr = json.serialize(param);
+         return jsonStr.substring(1, jsonStr.length() - 1);
+   } ..........
+   ```
+
+**개념은 빈 행으로 분리**
+
+시각적 단서를 주기 위해 서로 다른 개념 사이에는 빈 행을 넣어준다.
+
+**세로 밀집도**
+
+연관성 있는 코드들이 밀집되게(`가까이`) 구성한다.
+
+```java
+public List<Pair> parameterToPair(String name, Object value) {
+    List<Pair> params = new ArrayList<Pair>();
+
+    // preconditions
+    if (name == null || name.isEmpty() || value == null || value instanceof Collection) {
+      return params;
+    }
+
+    params.add(new Pair(name, parameterToString(value)));
+    return params;
+  }
+```
+
+**수직 거리**
+
+서로 연관된 개념은 세로로 가까이 두어야 코드 가독성이 좋아진다.
+
+- 연관성 : 한 개념을 이해하기 위해 알아야 하는 (`관련된`) 다른 개념
+
+**변수 선언**
+
+`변수가 선언된 라인`은 `사용 되는 라인`과 가까이 위치해야 한다.
+
+**인스턴스 변수**
+
+클래스 맨 처음에 선언한다.
+
+- 이유 : 클래스가 잘 설계 되어 있다면 수많은 클래스 메서드가 같은 인스턴스 변수를 사용하기 때문.
+
+**종속 함수**
+
+종속된 관계(`한 함수가 다른 함수를 호출`) 라면 세로로 가까이 배치한다.
+
+가독성을 위해 호출하는 함수가 호출 되는 함수보다 상단에 위치시킨다.
+
+**개념적 유사성**
+
+친화도가 높은(`비슷한 동작을 수행한다던가`) 코드는 세로로 가까이 배치한다.
+
+</details>
+
+<details><summary>가로 형식 맞추기</summary>
+
+대다수의 프로그래머는 읽기 편한 이유로 인해 짧은 행을 선호한다.
+
+**가로 공백과 밀집도**
+
+밀접한 개념과 느슨한 개념은 가로 밀집도를 위해 표현 가능하다.
+
+- 밀접한 개념 (높은 밀집도)
+- 느슨한 개념 (낮은 밀집도)
+
+연산자 우선순위를 강조하기 위해 공백을 사용한다.
+
+**가로 정렬**
+
+가로 정렬은 취향 차이.
+
+**들여쓰기**
+
+들여쓰기를 통해 범위(`scope`)가 구분이 된다.
+
+들여쓰기가 되어 있는 코드는 인간이 읽기 쉬운 형태가 된다.
+
+</details>
+
+<details><summary>팀 규칙</summary>
+
+자신이 선호하는 규칙을 따라서는 안 된다.
+
+한 팀이라면 규칙을 정하고 그 규칙을 따라야 한다.
+
+한 팀이 작성한 코드는 외부에서 봤을때 한 사람이 짠것 같은 정도로 일관적인 스타일을 지녀야 한다.
+
+</details>
+
+
 # 8
 ## 경계
 > Boundaries
