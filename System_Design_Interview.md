@@ -14,7 +14,7 @@ Chapter|         Title       | Page  |   Date
 02      |개략적인 규모 측정|033-038|
 [03](#3)|시스템 설계 면접 공략법|039-050|
 [04](#4)|처리율 제한 장치의 설계|051-076|
-05      |안정 해시 설계|077-090|
+[05](#5)|안정 해시 설계|077-090|
 06      |키-값 저장소 설계 |091-116|
 07      |분산 시스템을 위한 유일 ID 생성기 설계|117-126|
 08      |URL 단축기 설계|127-140|
@@ -174,7 +174,7 @@ Chapter|         Title       | Page  |   Date
       daily active users, retention, revenue, etc
     - Automation
 
-</details>
+</details><br>
 
 # 3
 ## 시스템 설계 면접 공략법
@@ -249,7 +249,7 @@ Chapter|         Title       | Page  |   Date
 1. 가능하다면 여러 해법을 제시할 것.
 1. 세부사항 설명시 가장 중요한 컴포넌트부터 진행할 것.
 
-</details>
+</details><br>
 
 # 4
 ## 처리율 제한 장치의 설계
@@ -354,7 +354,73 @@ Chapter|         Title       | Page  |   Date
   - 예외 및 에러 처리를 통해 예외적인 상황에서도 잘 복구 될 수 있도록 할 것.
   - Retry 로직 구현시 충분한 Back-off 시간을 둘 것.
 
-</details>
+</details><br>
+
+
+# 5
+## 안정 해시 설계
+> Design Consistent Hashing
+
+수평적 규모 확장을 위해 요청/데이터를 서버에 균등하게 나누어주어야 한다. 이를 달성하기 위해 고안된 기술이 안정 해시이다.
+
+<details><summary>NOTE</summary><br>
+
+### 해시 키 재배치(rehash) 문제
+여러개의 캐시 서버가 존재할 때 서버들에 부하를 균등하게 나누어 주어야 한다. 보통 해시 함수를 사용한다.
+
+`serverIndex = hash(key) % N`
+- N : 서버 개수 
+
+<img width="600" alt="server_hash" src="https://user-images.githubusercontent.com/48475824/133911168-9f66d8e2-9adf-4b72-bec8-918aa3b89a98.png">
+
+- 분산된 서버의 모습
+
+#### ISSUE
+서버 추가/삭제 시 문제 발생.  
+- server pool 의 크기가 고정적일 때만 잘 작동한다. 하지만 서버의 추가 또는 삭제시 문제가 발생하게 됨.
+- 예)  
+  server pool: 4  
+  1번 서버 장애 발생 ⇒ 1번 서버 중단 시킴 == server pool: 3 ⇒ 서버 인덱스 값에 영향  
+
+  <img width="600" alt="server_hash_cache miss" src="https://user-images.githubusercontent.com/48475824/133911260-b0808659-0d64-4018-9ff5-d65da52551a2.png">
+
+  **cache miss**: 키의 재분재로 인해 캐시 클라이언트가 데이터가 없는 서버에 접속하게 될 수 있음 ⇒ 대규모 cache miss 초래  
+
+**Solution**: 안정 해시
+
+### 안정 해시
+해시 테이블 크기가 조정될 때 평균적으로 오직 k/n개의 키만 재배치 하는 기술.
+- k: key
+- n: slot
+
+안정 해시 기술을 도입한 사례  
+- Amazon DynamoDB 의 partitioning 관련 컴포넌트
+- Apache Cassandra 클러스터에서의 데이터 partitioning
+- Discord의 채팅 App
+- Akamai CDN
+- Meglev Network 부하 분산기
+
+#### 기본 구현법
+- 서버와 키를 균등 분포 해시 함수를 사용해 해시 링에 배치
+- 키의 위치에서 링을 시계 방향으로 탐색하다 만나는 최초의 서버가 키가 저장될 서버
+
+**ISSUE**  
+아래와 같은 두 가지 문제점이 존재  
+1. Partition 크기를 균등하게 유지 불가  
+  한 서버는 작은 해시 공간 또 다른 서버는 큰 해시 공간을 배정받는 상황이 발생하게 됨.
+    - Partition: 인접한 서버 사이의 해시 공간  
+1. 키의 균등 분포를 달성하기가 어려움  
+
+**Solution**: 가상 노드(virtual node)/복제(replica) 기법
+
+### 가상 노드
+**가상 노드**: 실제 노드 또는 서버를 가리키는 노드.
+
+가상 노드의 개수를 늘리기 ⇒ 균등해지는 키의 분포
+- 이는 표준 편차가 작아져서 데이터가 고르게 분포되기 때문
+  - **표준편차(standard-deviation)**: 데이터가 어떻게 퍼져있는지를 나타내는 척도
+
+</details><br>
 
 
 # 10
@@ -462,4 +528,4 @@ Chapter|         Title       | Page  |   Date
 - 전송률 제한  
   알림을 보내는 빈도를 제한할 수 있도록 할 것.
 
-</details>
+</details><br>

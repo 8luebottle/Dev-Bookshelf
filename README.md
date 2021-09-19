@@ -45,4 +45,4 @@
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
-|[System Design Interview](./System_Design_Interview.md)|Alex Xu|09.02.2021|
+|[System Design Interview](./System_Design_Interview.md)|Alex Xu|09.19.2021|
