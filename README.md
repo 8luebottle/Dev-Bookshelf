@@ -21,6 +21,14 @@
     ├── Clean Architecture
     └── Clean Code
     ```
+* [M](#s)
+    ```
+    └── Monolith to Microservices
+    ```
+* [O](#s)
+    ```
+    └── Operating System Concepts Essentials
+    ```
 * [S](#s)
     ```
     └── System Design Interview
@@ -37,6 +45,24 @@
 |CODE              |Charles Petzold    ||
 |Clean Architecture|Robert Cecil Martin||
 |[Clean Code](./Clean_Code.md)|Robert Cecil Martin|08.29.2021|
+
+[↑ return to TOC](#table-of-contents)
+
+## M
+<img width="500" alt="section-m" src="https://user-images.githubusercontent.com/48475824/147248669-27d6ab20-4cfb-4320-b99b-d4a3d97f0dbc.png">
+
+| Title            |       Author      |Last Updated|
+|------------------|:-----------------:| :--------: |
+|Monolith to Microservices|San Newman||
+
+[↑ return to TOC](#table-of-contents)
+
+## O
+<img width="500" alt="section-o" src="https://user-images.githubusercontent.com/48475824/147248892-3822c103-ae00-4594-a5b7-4213818717a2.png">
+
+| Title            |       Author      |Last Updated|
+|------------------|:-----------------:| :--------: |
+|Operating System Concepts Essentials|Silberschatz, Galvin, Gagne||
 
 [↑ return to TOC](#table-of-contents)
 
