@@ -84,10 +84,11 @@
 [↑ return to TOC](#table-of-contents)
 
 ## S
-<img width="500" alt="secition-s" src="https://user-images.githubusercontent.com/48475824/130087555-c38b1c09-847a-47bd-930f-a720a8fe121f.png">
+<img width="500" alt="secition-s" src="https://user-images.githubusercontent.com/48475824/177133046-1d32787a-59a8-42a3-847e-d1ff87e4e224.png">
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
+|Software Engineering at Google|Hyrum Wright, Titus Winters, and Tom Manshreck||
 |[System Design Interview](./System_Design_Interview.md)|Alex Xu|09.19.2021|
 
 ## U
