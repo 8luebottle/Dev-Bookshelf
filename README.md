@@ -40,7 +40,9 @@
     ```
 * [T](#t)
     ```
-    └── The Elements of Computing Systems
+    ├── The Elements of Computing Systems
+    └── The Pragmatic Programmer 
+
     ```
 * [U](#u)
     ```
@@ -91,11 +93,12 @@
 [↑ return to TOC](#table-of-contents)
 
 ## T
-<img width="506" alt="secition-t" src="https://user-images.githubusercontent.com/48475824/190894815-65901940-b0b4-4da7-b364-362f81b99bf6.png">
+<img width="500" alt="secition-t" src="https://user-images.githubusercontent.com/48475824/208287009-21b50067-377f-4d86-b957-c6eedaedbc1d.png">
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
 |The Elements of Computing Systems|Noam Nisan and Shimon Schocken||
+|The Pragmatic Programmer|Andy Hunt, Dave Thomas||
 
 [↑ return to TOC](#table-of-contents)
 
