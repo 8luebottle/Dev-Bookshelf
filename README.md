@@ -26,16 +26,17 @@
     ```
     └── 함께 자라기 
     ```
-* [M](#s)
+* [M](#m)
     ```
     └── Monolith to Microservices
     ```
-* [O](#s)
+* [O](#o)
     ```
     └── Operating System Concepts Essentials
     ```
 * [S](#s)
     ```
+    ├── Software Engineering at Google
     └── System Design Interview
     ```
 * [T](#t)
@@ -107,7 +108,7 @@
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
-|Software Engineering at Google|Hyrum Wright, Titus Winters, and Tom Manshreck||
+|[Software Engineering at Google](./Software_Engineering_at_Google.md)|Hyrum Wright, Titus Winters, and Tom Manshreck|01.15.2023|
 |[System Design Interview](./System_Design_Interview.md)|Alex Xu|09.19.2021|
 
 [↑ return to TOC](#table-of-contents)
