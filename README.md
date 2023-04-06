@@ -57,12 +57,12 @@
 ![section-c 1](https://user-images.githubusercontent.com/48475824/92779124-bf88f500-f3dc-11ea-9b7b-de1dabf55d09.png)  
 <img width="522" alt="Section-c 2" src="https://user-images.githubusercontent.com/48475824/179347815-7c684b10-b586-42fb-909c-9fd293dfe40b.png">
 
-| Title            |       Author      |Last Updated|
-|------------------|:-----------------:|:----------:|
+| Title            |       Author      | Last Updated |
+|------------------|:-----------------:|:------------:|
 |CODE              |Charles Petzold    ||
 |Computer Architecture|John L. Hennessy, David A. Patterson||
-|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|            |
-|[Clean Code](./Clean_Code.md)|Robert Cecil Martin| 08.29.2021 |
+|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  04.06.2023  |
+|[Clean Code](./Clean_Code.md)|Robert Cecil Martin|  08.29.2021  |
 
 [↑ return to TOC](#table-of-contents)
 
