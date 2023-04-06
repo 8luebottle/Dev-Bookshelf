@@ -61,7 +61,7 @@
 |------------------|:-----------------:|:------------:|
 |CODE              |Charles Petzold    ||
 |Computer Architecture|John L. Hennessy, David A. Patterson||
-|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  04.06.2023  |
+|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  04.07.2023  |
 |[Clean Code](./Clean_Code.md)|Robert Cecil Martin|  08.29.2021  |
 
 [↑ return to TOC](#table-of-contents)
