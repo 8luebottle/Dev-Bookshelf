@@ -11,7 +11,7 @@ Clean Architecture: A Craftsman's Guide to Software Structure and Design
 | [00](#0) |   Introduction   |     000-004      | 04.01.2023 |
 | [01](#1) |    설계와 아키텍처란?    | 005-014 | 04.01.2023 |
 | [02](#2) | 두 가지 가치에 대한 이야기  | 015-022 | 04.02.2023 |
-|    03    |     패러다임 개요      | 023-028 ||
+| [03](#3) |     패러다임 개요      | 023-028 | 04.02.2023 |
 |    04    |    구조적 프로그래밍     | 029-036 ||
 |    05    |   객체 지향 프로그래밍    | 037-050 ||
 |    06    |    함수형 프로그래밍     | 053-060 ||
@@ -250,3 +250,76 @@ Unused configuration options, over-engineered abstractions, unused code paths, a
   - 수정이 현실적으로 불가능한 시스템: 변경에 드는 비용 > 변경으로 인해 창출되는 수익 
 
 </details>
+
+----
+#3
+## 패러다임 개요
+
+#### A-0
+> 최초의 컴파일러
+
+그레이스 호퍼(Grace Hoper)가 발명
+-  **A-O:** 1952년 그레이스 호퍼와 연구팀이 개발한 최초의 컴파일러
+  - 사실상 A-0 컴파일러 자체는 Billous 와 Conrad 가 개발.
+    - John McCarthy Billous: 
+      - 미국의 컴퓨터 과학자
+    - Corrado Bohm Conrad:
+      - 이탈리아의 컴퓨터 과학자
+
+`Compiler` 라는 용어 자체도 그레이스 호퍼가 처음으로 사용.
+
+<details><summary>프로그래밍 패러다임</summary>
+
+> Programming paradigm
+
+- **programming paradigm**: 
+  - 컴퓨터 프로그램을 설계하고 구현하는 방법론이나 철학을 의미.
+  - 프로그래밍을 하는 방법
+  - 언어와는 독립적
+
+</details> 
+
+<details><summary>3 Types of programming paradigm</summary>
+
+1. **구조적 프로그래밍**(structural programming):
+    - 에츠허르 비버 데이크스트(Edsger Wybe Dijkstra)라가 발견
+    - 무분별한 goto 는 해롭다.
+      - 이를 제어문(`if/then/else`, `do/while/until`)으로 대체
+      - 관련 논문: [`Go To Statement Considered Harmful` (GOTO 문의 해로움)](http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html)
+        - 관련된 문구: `"The go to statement as it stands is just too primitive; it is too much an invitation to make a mess of one's program."`
+      - Goto 문
+        - 코드의 제어 흐름을 제어하는 명령문.
+        - 프로그래머가 원하는 위치로 코드를 점프시켜 실행하도록 도와줌.
+        - 이는 가독성, 유지보수성, 디버깅을 어렵게 만듬.   
+          프로그래밍의 실행 흐름이 복잡해지고 예측하기 어려워지기 때문. 또한, 로직이 불명확하게 됨.
+
+`구조적 프로그래밍은 제어흐름의 직접적인 전환에 대해 규칙을 부과한다.`
+
+2. **객체지향 프로그래밍**(object-oriented programming):
+    - Ole-Johan Dahal 과 Kristen Nygarard 가 발견.
+    - 함수 호출 스택 프레임(stack frame)을 힙(heap)으로 옮기는 것에 대한 아이디어
+      - `함수 호출 스택 프레임을 힙으로 옮기면, 함수 호출이 반환된 이후에도 함수에서 선언된 지역 변수가 오랫동안 유지될 수 있음`
+      - 기존: 함수 호출 스택 프레임은 함수 호출 시, 스택 메모리에 쌓임 → 함수 호출 후 스택에서 제거됨. → 지역 변수 사라짐. 
+      - 변화: 함수 호출 스택 프레임을 힙 메모리에 할당 → 함수 호출후에도 지역 변수가 남아있음. (오랫동안 유지)
+    - 이를 통해 객체(object)와 클래스(class)를 만들어 냄.(객체 프로그래밍에서 중요한 개념)
+      - 상속, 캡슐화, 다형성 
+    - 데이터와 함수를 하나의 개념으로 묶어 객체를 생성하여 프로그램을 구성하는 방식을 제안 
+
+`객체 지향 프로그래밍은 제어흐름의 간접적인 전환에 대해 규칙을 부과한다.`
+
+3. **함수형 프로그래밍**(functional programming):
+    - 함수형 프로그래밍 패러다임은 람다 계산법(Lambda Calculus)을 기반으로 한다.
+      - `Lambda Calculus`: 1930년대 Alonzo Church 수학자에 의해 개발됨.
+        - 람다 계산법에서 불변성(Immutability)은 매우 중요한 개념.
+        - 람다 계산법에서 함수는 입력값을 가지고 출력값을 계산. 이때, 함수의 입력값이나 내부 변수 등은 변경되지 않고 입력값을 받아 출력값을 계산한 뒤 반환.
+          즉, 함수는 상태를 변경하지 않으며 입력값과 출력값만으로 동작.
+      - 함수형 언어에는 할당문이 전형 없다. (변경할 수 있는 방법을 주기도 하지만 극히 제한적.) 
+    - 함수형 프로그래밍 언어:
+      - LISP
+      - ML
+
+`함수형 프로그래밍은 할당문에 대해 규칙을 부과한다.`
+
+</details>
+
+`각 패러다임은 프로그래머에게서 권한을 박탈한다.` 
