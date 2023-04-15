@@ -61,7 +61,7 @@
 |------------------|:-----------------:|:------------:|
 |CODE              |Charles Petzold    ||
 |Computer Architecture|John L. Hennessy, David A. Patterson||
-|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  04.07.2023  |
+|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  04.15.2023  |
 |[Clean Code](./Clean_Code.md)|Robert Cecil Martin|  08.29.2021  |
 
 [↑ return to TOC](#table-of-contents)
@@ -94,7 +94,7 @@
 [↑ return to TOC](#table-of-contents)
 
 ## T
-<img width="500" alt="secition-t" src="https://user-images.githubusercontent.com/48475824/208287009-21b50067-377f-4d86-b957-c6eedaedbc1d.png">
+<img width="500" alt="section-t" src="https://user-images.githubusercontent.com/48475824/208287009-21b50067-377f-4d86-b957-c6eedaedbc1d.png">
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
@@ -104,7 +104,7 @@
 [↑ return to TOC](#table-of-contents)
 
 ## S
-<img width="500" alt="secition-s" src="https://user-images.githubusercontent.com/48475824/177133046-1d32787a-59a8-42a3-847e-d1ff87e4e224.png">
+<img width="500" alt="section-s" src="https://user-images.githubusercontent.com/48475824/177133046-1d32787a-59a8-42a3-847e-d1ff87e4e224.png">
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |
@@ -114,7 +114,7 @@
 [↑ return to TOC](#table-of-contents)
 
 ## U
-<img width="500" alt="secition-u" src="https://user-images.githubusercontent.com/48475824/150663091-89c9191d-5858-4a8f-aacd-13468dd2e717.png">
+<img width="500" alt="section-u" src="https://user-images.githubusercontent.com/48475824/150663091-89c9191d-5858-4a8f-aacd-13468dd2e717.png">
 
 | Title            |       Author      |Last Updated|
 |------------------|:-----------------:| :--------: |

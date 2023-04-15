@@ -12,7 +12,7 @@ Clean Architecture: A Craftsman's Guide to Software Structure and Design
 | [01](#1) |    설계와 아키텍처란?    | 005-014 | 04.01.2023 |
 | [02](#2) | 두 가지 가치에 대한 이야기  | 015-022 | 04.02.2023 |
 | [03](#3) |     패러다임 개요      | 023-028 | 04.02.2023 |
-|    04    |    구조적 프로그래밍     | 029-036 ||
+| [04](#4) |    구조적 프로그래밍     | 029-036 | 04.02.2023 |
 |    05    |   객체 지향 프로그래밍    | 037-050 ||
 |    06    |    함수형 프로그래밍     | 053-060 ||
 |    07    |  SRP: 단일 책임 원칙   | 061-072 ||
@@ -48,7 +48,7 @@ Clean Architecture: A Craftsman's Guide to Software Structure and Design
 ## Introduction
 > 옮긴이의 글, 추천사, 서문, 감사의 글
 
-<details><summary>Dead Code</summary></summary>
+<details><summary>Dead Code</summary>
 
 > 실행되지 않는 코드 
 > 
@@ -252,21 +252,24 @@ Unused configuration options, over-engineered abstractions, unused code paths, a
 </details>
 
 ----
-#3
+# 3
 ## 패러다임 개요
 
-#### A-0
+<details><summary>A-O</summary>
+
 > 최초의 컴파일러
 
 그레이스 호퍼(Grace Hoper)가 발명
 -  **A-O:** 1952년 그레이스 호퍼와 연구팀이 개발한 최초의 컴파일러
-  - 사실상 A-0 컴파일러 자체는 Billous 와 Conrad 가 개발.
+  - 사실상 A-O 컴파일러 자체는 Billous 와 Conrad 가 개발.
     - John McCarthy Billous: 
       - 미국의 컴퓨터 과학자
     - Corrado Bohm Conrad:
       - 이탈리아의 컴퓨터 과학자
 
 `Compiler` 라는 용어 자체도 그레이스 호퍼가 처음으로 사용.
+
+</details>
 
 <details><summary>프로그래밍 패러다임</summary>
 
@@ -282,7 +285,7 @@ Unused configuration options, over-engineered abstractions, unused code paths, a
 <details><summary>3 Types of programming paradigm</summary>
 
 1. **구조적 프로그래밍**(structural programming):
-    - 에츠허르 비버 데이크스트(Edsger Wybe Dijkstra)라가 발견
+    - 에츠허르 비버 데이크스트라(Edsger Wybe Dijkstra)가 발견
     - 무분별한 goto 는 해롭다.
       - 이를 제어문(`if/then/else`, `do/while/until`)으로 대체
       - 관련 논문: [`Go To Statement Considered Harmful` (GOTO 문의 해로움)](http://www.u.arizona.edu/~rubinson/copyright_violations/Go_To_Considered_Harmful.html)
@@ -323,3 +326,61 @@ Unused configuration options, over-engineered abstractions, unused code paths, a
 </details>
 
 `각 패러다임은 프로그래머에게서 권한을 박탈한다.` 
+
+----
+# 4
+## 구조적 프로그래밍
+
+<details><summary>증명</summary>
+
+> Goodbye goto statement
+
+`데이크스트라`는 수학의 `증명`(Proof | 证明) 원리를 통해 프로그래밍의 문제를 해결하고자 했다. 그리고 goto 문이 증명 원리를 사용하는데 걸림돌임을 발견하였다.
+- 데이크스트라: Edsger Wyber Dijkstra(05.11.1930-08.06.2002)는 네덜란드 로테르담(Rotterdam)에서 출신의 컴퓨터 과학자
+  - 구조적 프로그래밍 방법론을 제안함. 
+
+증명시 분할 정복(divide and conquer) 접근법을 사용해야하지만 goto 문은 `분할 정복 접근법 사용을 불가능`하게 한다. 
+- 분할 정복 사용 불가: 모듈을 작은 단위로 쪼개 재귀적으로 분해할 수 없게 되기에.
+  - 모듈: 프로그래밍에서 특정 기능을 수행하는 코드의 논리적 단위.
+
+goto문은 실행 흐름을 제한 없이 자유자재로 이동시킨다. 이는 프로그램의 구조를 이해하기 어렵게 만드는 요인이며 유지보수도 어렵게 만든다.
+재귀적인 분석을 위해서는 goto문을 사용하지 않도록 해야 한다. 그 대신, 제어문과 함수 호출등을 이용하여 프로그램의 실행흐름을 구성해야 한다.
+- `goto` (X) → `if/then/else`, `do/while` (O)
+
+</details>
+
+<details><summary>탄생</summary>
+
+> 구조적 프로그래밍의 탄생
+
+1. 데이크스트라
+    - 제어구조(Control structure)만을 사용한다면 증명 가능한 단위로까지 모듈을 재귀적으로 세분화 할 수 있다.
+2. 뵘, 야코피니
+    - 모든 프로그램은 순차(sequence), 분기(selection), 반복(iteration) 세가지 구조만으로 표현할 수 있다고 증명.
+
+데이크스트라는 `모듈을 증명 가능케 하는 제어구조` == `모든 프로그램을 만들 수 있는 제어 구조의 최소 집합` 이라는 사실을 발견. 이는 구조적 프로그래밍을 탄생하게 만듬.
+
+**최소 집합 minimum set 最小集合**  
+제어구조의 최소 집합은 `순차`와 `조건문`
+- 순차 (Sequential): 코드의 실행 방향이 위에서 아래로 순차적으로 한줄씩 실행된다.
+- 조건문 (Conditional Statement): 특정 조건에 따라 특정 코드 블록이 실행된다. (`if-else`, `switch-case` etc)
+
+</details>
+
+<details><summary>구조적 분석, 구조적 설계</summary>
+
+> Structural analysis & Structural design
+
+**구조적 분석 structural analysis**  
+시스템의 구조를 분해하고 모델링 하는 과정
+- 소프트웨어 요구사항을 수집하고 분석.
+- 시스템의 기능, 데이터 및 처리 방법을 문서화.
+- Data Flow Diagram (DFD)
+
+**구조적 설계 structural design**  
+시스템의 구조를 설계하는 과정
+- 구조적 분석 과정에서 얻은 정보를 토대로 설계.
+- 시스템을 상위 수준에서부터 하위 수준으로 분해 → 모듈화 → 시스템 구조 설계
+- 모듈간의 관계 파악
+
+</details>
