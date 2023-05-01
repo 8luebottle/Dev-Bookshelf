@@ -15,7 +15,7 @@ Clean Architecture: A Craftsman's Guide to Software Structure and Design
 | [04](#4) |    구조적 프로그래밍     | 029-036 | 04.02.2023 |
 | [05](#5) |   객체 지향 프로그래밍    | 037-050 | 04.03.2023 |
 | [06](#6) |    함수형 프로그래밍     | 053-060 | 04.03.2023 |
-|    07    |  SRP: 단일 책임 원칙   | 061-072 | 04.04.2023 |
+| [07](#7) |  SRP: 단일 책임 원칙   | 061-072 | 04.04.2023 |
 |    08    |  OCP: 개방-폐쇄 원칙   | 073-080 | 04.06.2023 |
 |    09    | LSP: 리스코프 치환 원칙  | 081-086 | 04.06.2023 |
 |    10    | ISP: 인터페이스 분리 원칙 | 087-090 | 04.06.2023 |
@@ -510,5 +510,95 @@ OOP 의 본질은 세 개의 항목중에서 어느것인가?
   - 불변성 상태를 통해 코드의 예측 가능성, 테스트 용이성, 병렬 처리등을 향상.
     - 변수의 값이 변경되지 않음.
     - 함수의 호출이 늘 동일한 결과를 반환.
+
+</details>
+
+---
+# 7
+## SRP: 단일 책임 원칙
+
+<details><summary>단일 책임 원칙에 대하여</summary>
+
+`단일 모듈은 변경의 이유가 하나, 오직 하나뿐이어야 한다.` == `하나의 모듈은 하나의, 오직 하나의 액터에 대해서만 책임져야 한다.`
+- 모듈(模块): 함수와 데이터 구조로 구성된 `응집`된 집합.
+    - **응집**: 모듈의 내부 구성 요소들이 얼마나 관련되어 있는지를 나타냄.  
+      모듈 내부의 요소들이 밀접하게 관련되어 있어야 한다.
+        - 응집도 높음: 내부 요소들이 서로 밀접하게 관련되어 있음.
+          - 코드 수정이 수월함. 
+        - 응집도 낮음: 내부 요소들이 서로 연관성이 적음.
+          - 기능을 이해하기 어렵게 만듬.
+          - 코드 수정을 어렵게 만듬.
+- 액터: 시스템이 동일한 방식으로 변경되기를 원하는 사용자/이해관계자들
+
+</details>
+
+<details><summary>서로 다른 액터의 코드를 분리</summary>
+
+서로 다른 액터가 의존하는 코드를 서로 분리해야 한다. 이를 어길 시 병합의 문제가 발생한다.
+- 코드의 예시 (in python)
+    ```python
+    class Order:
+        def __init__(self, items):
+            self.items = items
+            self.payment = Payment()
+    
+        def process_order(self):
+            self.payment.charge()
+            print("Order processed successfully!")
+
+
+    class Payment:
+        def __init__(self):
+            self.amount = 10000
+
+        def charge(self):
+            print(f"Charging {self.amount} dollars...")
+    ```
+    Order 클래스와 Payment 클래스는 서로를 의존하고 있다.
+    무언가를 변경하려 할 시 두 클래스를 같이 수정해줘야 하게 된다. 서로의 의존성을 분리해야 한다.
+
+  - **해결책**: 메서드를 각기 다른 클래스로 이동시킴.
+    - 각 클래스는 반드시 필요한 소스 코드만 갖도록 함.
+    - **퍼사드 패턴(Facade Pattern)**:
+      - Facade: `건물의 정면이나 입구` 
+        - 건물의 내부 구조를 숨기고 단순한 입구만 보여주는 Facade 처럼, 복잡한 코드를 사용하기 쉬운 인터페이스로 감싸서 제공하는 것.
+          - 건축: 간단한 현관문과 로비만 보여줌. 
+          - 코드: (복잡한 시스템이나 라이브러리를 숨기고) 클래스, 메서드만 보여줌.
+      - 내부 구조와 동작 방식을 알 필요 없이 필요한 메서드를 호출하여 사용.
+      - 코드의 예시 (in python)    
+        자동차 엔진 시동 키는 기능 
+        ```python
+          class Engine:
+              def start(self):
+              print("Engine started")
+
+              def stop(self):
+                  print("Engine stopped")
+
+          class IgnitionSystem:
+              def ignite(self):
+              print("Ignition system ignited")
+
+          class Battery:
+              def power_on(self):
+              print("Battery power on")
+
+          class CarFacade:
+              def __init__(self):
+              self.engine = Engine()
+              self.ignition_system = IgnitionSystem()
+              self.battery = Battery()
+
+              def start(self):
+                  self.battery.power_on()
+                  self.ignition_system.ignite()
+                  self.engine.start()
+            
+              def stop(self):
+                  self.engine.stop()
+                  self.ignition_system.ignite()
+                  self.battery.power_on()
+          ```
+          엔진을 켤 때 발생하는 복잡한 상호작용을 그대로 보여주지 않고, 단순화된 인터페이스로 제공한다.
 
 </details>
