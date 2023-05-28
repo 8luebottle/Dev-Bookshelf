@@ -63,7 +63,7 @@
 |CODE              |Charles Petzold    ||
 |Computer Architecture|John L. Hennessy, David A. Patterson||
 |Computer Systems|Randal E. Bryant, David R. O'Hallaron||
-|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  05.02.2023  |
+|[Clean Architecture](./Clean_Architecture.md)|Robert Cecil Martin|  05.28.2023  |
 |[Clean Code](./Clean_Code.md)|Robert Cecil Martin|  08.29.2021  |
 
 [↑ return to TOC](#table-of-contents)
