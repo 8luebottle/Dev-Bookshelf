@@ -223,6 +223,8 @@
 
 ## 실용주의 접근법
 
+> A Pragmatic Approach 务实的方法
+
 <details><summary>좋은 설계의 핵심</summary>
 
 > The Essence of Good Design 优秀设计的精髓
@@ -336,6 +338,25 @@
 ## 기본 도구
 
 > The Basic Tools 基础工具
+
+<details><summary>셸 가지고 놀기</summary>
+
+목수의 작업대처럼 프로그래머의 작업대는 shell 이다.
+
+- `GUI의 환경의 기능은 일반적으로 설계자가 의도한 범위를 넘어설 수 없다.`
+
+  - GUI 장점: WYSIWYG (What You See Is What You Get)
+  - GUI 단점: WYSIAYG (What You See Is All You Get)
+
+- Shell 에 익숙해지면 생산성도 상승한다.
+  - 자동화와 스크립팅
+  - 강력한 명령어
+    - 복잡한 작업을 단일 명령어로
+  - 리소스 효율성
+    - 텍스트 기반
+  - 빠른 작업 흐름
+
+</details>
 
 <details><summary>디버깅</summary>
 
