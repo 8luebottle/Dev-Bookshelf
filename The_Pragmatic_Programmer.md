@@ -381,6 +381,31 @@ Refactoring: 자신이 작성하는 코드를 항상 비판적으로 바라보�
 
 </details>
 
+<details><summary>도메인 언어</summary>
+
+> Domain Languages 领域语言
+
+도메인 언어: 특정 도메인의 문제 영역에 특화된 프로그래밍 언어.
+
+`언어의 한계가 곧 자기 세계의 한계다. -Ludwig Wittgenstein`
+
+- 컴퓨터 언어는 문제 및 의사소통에 대해 생각하는 방식에 영향을 미친다.
+  - Static Typed, Dynamic Typed
+  - Early Binding, Late Binding
+  - Functional, Object-Oriented
+- 문제 도메인에 가깝게 프로그래밍 하라.
+
+- 도메인과 언어:
+  - 데이터베이스: SQL
+  - 통계, 분석: R
+  - 수치 계산, 과학적 컴퓨팅: MATLAB
+  - 논리 프로그래밍: Prolog
+    - 공학, 수학, 데이터 분석 etc
+  - 웹: JavaScript
+  - iOS, macOS: Switft
+
+</details>
+
 <details><summary>추정</summary>
 
 > Estimating 估算
