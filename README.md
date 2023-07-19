@@ -111,7 +111,7 @@
 | Title                                                     |             Author             | Last Updated |
 | --------------------------------------------------------- | :----------------------------: | :----------: |
 | The Elements of Computing Systems                         | Noam Nisan and Shimon Schocken |              |
-| [The Pragmatic Programmer](./The_Pragmatic_Programmer.md) |     Andy Hunt, Dave Thomas     |              |
+| [The Pragmatic Programmer](./The_Pragmatic_Programmer.md) |     Andy Hunt, Dave Thomas     |  07.19.2023  |
 
 [↑ return to TOC](#table-of-contents)
 
