@@ -866,7 +866,8 @@ public void applyDiscount(customer, order_id, discount) {
     - 프로세서들이 독짋적으로 수행된다.
     - 서로간에 데이터를 공유 X
 
-<details><summray>시간적 결합 깨트리기</summary>
+<details><summary>시간적 결합 깨트리기</summary>
+
 직선적 사고 방식이 시간적 결합을 만든다.
 - A를 완료한 후에 B를 하고...똑.딱.똑.딱.똑-다음은-딱.
 
@@ -882,5 +883,18 @@ public void applyDiscount(customer, order_id, discount) {
 ### 병렬 작업의 기회
 - 엘릭서의 컴파일러
   - 커다란 작업을 쪼개서 병렬로 처리 → 결과 합치기
+
+</details>
+
+<details><summary>공유 상태는 틀린 상태</summary>
+
+상태를 공유해서는 안된다. 비원자적 갱신을 원자적으로 바꾸어야 한다.
+- 비원자적 갱신(Non-Atomic Update)
+  - 여러 단계로 이뤄진 갱신 작업.
+  - 다수의 명령이 수행될 때 중간에 다른 작업이 들어옴으로 인해 갱신 작업이 중단될 위험성 존재.
+- 원자적 갱신(Atomic Update)
+  - 동시성 문제 방지.
+
+`불규칙한 실패는 동시성 문제인 경우가 많다.`
 
 </details>
