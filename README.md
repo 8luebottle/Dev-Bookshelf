@@ -66,7 +66,7 @@
 | Title                                         |                Author                 | Last Updated |
 | --------------------------------------------- | :-----------------------------------: | :----------: |
 | CODE                                          |            Charles Petzold            |              |
-| CODE COMPLETE                                 |            Steve McConnell            |              |
+| [CODE COMPLETE](./Code_Complete.md)           |            Steve McConnell            |  07.23.2023  |
 | Computer Architecture                         | John L. Hennessy, David A. Patterson  |              |
 | Computer Systems                              | Randal E. Bryant, David R. O'Hallaron |              |
 | [Clean Architecture](./Clean_Architecture.md) |          Robert Cecil Martin          |  05.28.2023  |
