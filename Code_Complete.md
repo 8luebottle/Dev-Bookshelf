@@ -17,9 +17,9 @@
 |      |         |   2.3   | Common Software Metaphors                                              | 013-022 |            |
 |      | [3](#3) |         | Measure Twice, Cut Once: Upstream Prerequisites                        |         | 09.09.2023 |
 |      |         |   3.1   | Importance of Prerequisites                                            | 023-030 |            |
-|      |         |   3.2   | Determine the Kind of Software You're Working On                       |         |            |
-|      |         |   3.3   | Problem-Definition Prerequisite                                        |         |            |
-|      |         |   3.4   | Requirements Prerequisite                                              |         |            |
+|      |         |   3.2   | Determine the Kind of Software You're Working On                       | 031-035 |            |
+|      |         |   3.3   | Problem-Definition Prerequisite                                        | 036-037 |            |
+|      |         |   3.4   | Requirements Prerequisite                                              | 038-042 |            |
 |      |         |   3.5   | Architecture Prerequisite                                              |         |            |
 |      |         |   3.6   | Amount of Time to Spend on Upstream Prerequisites                      |         |            |
 |      |    4    |         | Key Construction Decisions                                             |         |            |
@@ -381,5 +381,86 @@ graph TD;
 ```
 
 - Errors originating upstream tend to persist longer in the lifecycle and have the potential to cause broader impacts.
+
+</details>
+
+<details><summary><b>Determine the Kind of Software You’re Working On</b></summary>
+
+Projects typically fall into one of the following 3 categories:
+
+1. Business Systems
+
+- e.g. Inventory management, Games, Payroll systems etc.
+
+1. Mission-Critical Systems
+
+- e.g. Embedded software, Games, Web services etc.
+
+1. Embedded Life-Critical Systems
+
+- e.g. Medical devices, Operating systems, Packaged software etc.
+
+The balance between preparation and construction tasks varies depending on the project type. Understanding these types can enhance the project's chances of success.
+
+</details>
+
+<details><summary><b>Problem-Definition Prerequisite</b></summary>
+
+**Problem Definition (also known as Product Vision, Vision Statement, Mission Statement):**
+
+Before initiating a project, it is imperative to precisely define the problem at hand. The problem definition should be articulated in a user-friendly, non-technical language, taking into consideration the user's perspective.
+
+It is worth noting that programming does not always constitute the exclusive solution. Occasionally, problems can be resolved without writing a single line of code.
+
+One must exercise caution to avoid misdefining the problem. Misdefining a problem can result in a substantial waste of time when attempting to solve the wrong problem, which amounts to a double penalty.
+
+</details>
+
+<details><summary><b>Requirement Prerequisite</b></summary>
+
+**Requirement Activity (also known as Requirements Development, Requirement Analysis, Analysis, Functional Specification):**
+
+`Requirements describe in detail what a software system is supposed to do.`
+
+The importance of clearly defining requirements lies in the following reasons:
+
+1. Enabling User-Centric Functionality:
+
+   - It allows for the consideration of users' opinions and demands.
+   - Users can review the system's features based on well-defined requirements, ensuring that the system aligns with their needs.
+
+1. Preventing Disputes:
+
+   - By defining the system's scope early on, different programmers can proceed with programming based on agreed-upon requirements.
+   - Disagreements can be resolved by referring to teh documented requirements.
+
+1. Cost Savings:
+   - Thoroughly examining requirements before development begins helps minimize future changes to the system. This, in turn, reduces costs associated with modifications and enhancements.
+
+In summary, the meticulous formulation of requirements serves to prioritize user satisfaction, prevent disputes, and ultimately lead to cost-effective project management.
+
+**Cost of correcting requirements:**
+The cost of correcting requirements errors varies depending on the state at which they are discovered. As requirements errors are detected further downstream in the process, the cost increases significantly.
+
+| Discovery Stage | Cost Comparison |
+| --------------- | --------------- |
+| Architecture    | 3x more         |
+| Coding          | 5-10x more      |
+| System Testing  | 10x more        |
+| After Release   | 10-100x more    |
+
+Hence, identifying requirement errors early in the upstream phase significantly reduces costs.
+
+But the concept of `Stable Requirements` is something that cannot exist. The reason for this are as follows:
+
+- It's challenging to establish stable requirements right from the start. This difficulty is associated with factors like the customer's understanding, changing environments, user feedback, and complexity.
+  - Customer Understanding:
+    - During the initial stages of a project, customers often have an incomplete understanding of the system or software.
+  - Changing Environment
+    - Business environments continually evolve, requiring adjustments to requirements.
+  - User Feedback
+    - Users, while using the software, may reevaluate requirements and request changes.
+  - Complexity
+    - In complex projects, it can be challenging to fully comprehend and document all requirements at the outset.
 
 </details>
