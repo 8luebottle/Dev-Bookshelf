@@ -1,6 +1,6 @@
 # Code Complete
 
-> My Personal Summary Notes on the Book `Code Complete`
+> These are my personal study notes for `Code Complete`
 
 ## Table of Contents
 
@@ -18,10 +18,10 @@
 |      | [3](#3) |         | Measure Twice, Cut Once: Upstream Prerequisites                        |         | 09.09.2023 |
 |      |         |   3.1   | Importance of Prerequisites                                            | 023-030 |            |
 |      |         |   3.2   | Determine the Kind of Software You're Working On                       | 031-035 |            |
-|      |         |   3.3   | Problem-Definition Prerequisite                                        | 036-037 |            |
+|      |         |   3.3   | Problem-Definition Prerequisite                                         | 036-037 |            |
 |      |         |   3.4   | Requirements Prerequisite                                              | 038-042 |            |
-|      |         |   3.5   | Architecture Prerequisite                                              |         |            |
-|      |         |   3.6   | Amount of Time to Spend on Upstream Prerequisites                      |         |            |
+|      |         |   3.5   | Architecture Prerequisite                                              | 043-054 | 09.10.2023 |
+|      |         |   3.6   | Amount of Time to Spend on Upstream Prerequisites                      | 055-060 |            |
 |      |    4    |         | Key Construction Decisions                                             |         |            |
 |      |         |   4.1   | Choice of Programming Language                                         |         |            |
 |      |         |   4.2   | Programming Conventions                                                |         |            |
@@ -39,7 +39,7 @@
 |      |         |   6.2   | Good Class Interfaces                                                  |         |            |
 |      |         |   6.3   | Design and Implementation Issues                                       |         |            |
 |      |         |   6.4   | Reasons to Create a Class                                              |         |            |
-|      |         |   6.5   | Language-Specific Issues                                               |         |            |
+|      |         |   6.5   | Language-Specific Issues                                                |         |            |
 |      |         |   6.6   | Beyond Classes: Packages                                               |         |            |
 |      |    7    |         | High-Quality Routines                                                  |         |            |
 |      |         |   7.1   | Valid Reasons to Create a Routine                                      |         |            |
@@ -75,10 +75,10 @@
 |      |         |  10.8   | Using Each Variable for Exactly One Purpose                            |         |            |
 |      |   11    |         | The Power of Variable Names                                            |         |            |
 |      |         |  11.1   | Considerations in Choosing Good Names                                  |         |            |
-|      |         |  11.2   | Naming Specific Types of Data                                          |         |            |
+|      |         |  11.2   | Naming Specific Types of Data                                           |         |            |
 |      |         |  11.3   | The Power of Naming Conventions                                        |         |            |
 |      |         |  11.4   | Informal Naming Conventions                                            |         |            |
-|      |         |  11.5   | Standardized Prefixes                                                  |         |            |
+|      |         |  11.5   | Standardized Prefixes                                                   |         |            |
 |      |         |  11.6   | Creating Short Names That Are Readable                                 |         |            |
 |      |         |  11.7   | Kinds of Names to Avoid                                                |         |            |
 |      |   12    |         | Fundamental Data Types                                                 |         |            |
@@ -154,7 +154,7 @@
 |      |   24    |         | Refactoring                                                            |         |            |
 |      |         |  24.1   | Kinds of Software Evolution                                            |         |            |
 |      |         |  24.2   | Introduction to Refactoring                                            |         |            |
-|      |         |  24.3   | Specific Refactorings                                                  |         |            |
+|      |         |  24.3   | Specific Refactorings                                                   |         |            |
 |      |         |  24.4   | Refactoring Safely                                                     |         |            |
 |      |         |  24.5   | Refactoring Strategies                                                 |         |            |
 |      |   25    |         | Code-Tuning Strategies                                                 |         |            |
@@ -181,7 +181,7 @@
 |      |         |  27.5   | Effect of Project Size on Development Activities                       |         |            |
 |      |   28    |         | Managing Construction                                                  |         |            |
 |      |         |  28.1   | Encouraging Good Coding                                                |         |            |
-|      |         |  28.2   | Configuration Management                                               |         |            |
+|      |         |  28.2   | Configuration Management                                                |         |            |
 |      |         |  28.3   | Estimating a Construction Schedule                                     |         |            |
 |      |         |  28.4   | Measurement                                                            |         |            |
 |      |         |  28.5   | Treating Programmers as People                                         |         |            |
@@ -250,7 +250,7 @@ Construction == The process of building
 
 <details><summary><b>What Is Software Construction</b></summary>
 
-Construciton is not a mechanical task. it encompasses various stages and activities beyond mere code writing.
+Construction is not a mechanical task. it encompasses various stages and activities beyond mere code writing.
 
 - Coding and debugging
 - Detailed design
@@ -268,7 +268,7 @@ Construciton is not a mechanical task. it encompasses various stages and activit
 
 <details><summary><b>Why Is Software Construction Important?</b></summary>
 
-Software is extensively used in various fields, and the fundamentals of each software are similar. If the quality and developer productivity of software can be imporved, it means that all of these software will benefit.
+Software is extensively used in various fields, and the fundamentals of each software are similar. If the quality and developer productivity of software can be improved, it means that all of these software will benefit.
 
 - Construction is a large part of software development.
   - The majority of the time(30%-80%) is allocated to construction.
@@ -292,16 +292,16 @@ To easily comprehend complex topics, one connects them with familiar concepts or
 
 - A good metaphor: Simple, relates well to other relevant metaphors.
 
-Some metahors are more effective than others.
+Some metaphors are more effective than others.
 
 - the earth-centered view Vs. the-sun-centered view
-- the computer-centered view Vs.the database-oriented view
+- the computer-centered view Vs. the database-oriented view
 
 `How well you unserstand the metaphors determines how well you understand software development.`
 
 2.1 can be summarized as follows:
 
-- Metaphors serve as a tool to simplify and enhance the comprehension of complex software development. By using metaphors, unfamiliar or challenging concepts are linked to more familiar and easily unserstandable ideas, making them easier to grasp.
+- Metaphors serve as a tool to simplify and enhance the comprehension of complex software development. By using metaphors, unfamiliar or challenging concepts are linked to more familiar and easily understandable ideas, making them easier to grasp.
 
 </details>
 
@@ -389,16 +389,11 @@ graph TD;
 Projects typically fall into one of the following 3 categories:
 
 1. Business Systems
-
-- e.g. Inventory management, Games, Payroll systems etc.
-
+   - e.g. Inventory management, Games, Payroll systems etc.
 1. Mission-Critical Systems
-
-- e.g. Embedded software, Games, Web services etc.
-
+   - e.g. Embedded software, Games, Web services etc.
 1. Embedded Life-Critical Systems
-
-- e.g. Medical devices, Operating systems, Packaged software etc.
+   - e.g. Medical devices, Operating systems, Packaged software etc.
 
 The balance between preparation and construction tasks varies depending on the project type. Understanding these types can enhance the project's chances of success.
 
@@ -462,5 +457,129 @@ But the concept of `Stable Requirements` is something that cannot exist. The rea
     - Users, while using the software, may reevaluate requirements and request changes.
   - Complexity
     - In complex projects, it can be challenging to fully comprehend and document all requirements at the outset.
+
+</details>
+
+<details><summary><b>Handling Requirements Changes During Construction</b></summary>
+
+1. Utilize the quality assessment checklist to refine your work.
+1. Ensure that everyone is informed about the time and cost implications of requirement changes.
+1. Ensure a change-control procedure to prevent excessive customer-requested modifications.
+1. Embrace development approaches that can adapt to changes, such as evolutionary methods, prototyping, and short iterative cycles.
+1. Consider discontinuing the project in cases of severe issues.
+1. Maintain a focus on the project's business case
+
+</details>
+
+<details><summary><b>Architecture Prerequisite</b></summary>
+
+The quality of the architecture determines the ultimate quality of the system of several reasons:
+
+- Ensuring Consistency
+  - It establishes and maintains consistency throughout the system, ensuring that all components work seamlessly together.
+- Providing Structural Guidance
+  - Architecture provides a clear structure for the system, helping developers understand how different parts related to each other.
+- Offering Developer Guidance
+  - It offers guidance to developers, providing them with a roadmap in how to implement various features and functions.
+- Facilitating Independent Development
+  - A well-thought-out architecture allows for independent development by multiple teams or developers, reducing bottlenecks.
+- Cost Savings and Efficiency
+  - It contributes to cost savings by preventing costly architectural changes during or after development.
+
+For these reasons, carefully considered architecture plays a significant role in determining the success or failure of a project.
+
+### Typical Architectural Components
+
+1. Program Organization
+
+   - Provide the Rationale for the Chosen Architecture:
+     - Instead of alternative options, there should be reasons provided for the current architectural configuration.
+     - The architecture should clarify the roles of each component and support the chosen configuration.
+       - Responsibilities of Each Component:
+         - Define the specific tasks, functions, or roles performed by individual classes, modules, or components.
+         - Describe how they interact with other components.
+       - Justification for the Chosen Configuration:
+         - Explain the advantages of the selected architecture over alternative approaches.
+         - Demonstrate how it aligns with system requirements.
+   - Define the Major Components of the Architecture:
+     - The architecture should define and describe the major components of the program.
+       - Definitions and descriptions of components enable developers to understand the structure and behavior of the program, which is crucial for both development and maintenance.
+   - Specify Responsibilities for Each Component:
+     - Responsibility Definition:
+       - In software architecture, this involves defining the specific tasks, behaviors, or roles that each component or module should undertake.
+     - Responsibility Area:
+       - What tasks the component performs.
+       - What data or functionality it is responsible for.
+   - Ensure Each Component Has a Single Responsibility Area (Independence Assurance):
+     - Each component should have a single responsibility rea to ensure independence.
+   - Clearly Define Communication Rules for Each Component:
+     - Direct Use of Other Components:
+       - Specify which other components a given component can directly utilize.
+       - e.g. a DB module may directly communicate with a DB server for reading/writing data.
+     - Define Indirect Use:
+       - Describe cases where components interact indirectly.
+     - Define Components That Should Not Be Used (Constraints):
+       - e.g. a security module should only access data through a user authentication module and must not communicate directly with DB.
+
+1. Major Classes
+
+   - `The architecture should specify the manor classes to be used.`
+     - The 80/20 rules applies here as well.
+
+1. Data Design
+
+   - `The architecture should describe the major files and table designs to be used.`
+     - For example, if sequential access is used, explain why it is superior to random access lists and provide justification for the choice.
+
+1. Business Rules
+1. User Interface Design
+1. Resource Management
+
+   - `The architecture should estimate the resources used for nominal and extream cases.`
+
+1. Security
+
+   - `The architecture should describe the approach to design-level and code-level security.`
+
+1. Performance
+
+   - Speed
+   - Memory
+   - Cost
+
+1. Scalability
+
+   - `Scailability is the ability of a system to grow to meet future demands.`
+
+1. Interoperability
+1. Internationalization/Localization
+1. Input/Output
+1. Error Processing
+
+   - Error handling is a factor that impacts the entire system and therefore should be addressed at the architectural level.
+
+1. Fault Tolerance
+1. Architectural Feasibility
+1. Overengineering
+1. Buy-vs.-Build Decisions
+1. Reuse Decisions
+1. Change Strategy
+
+   - The architecture should outline how it will handle changes when necessary because products are likely to evolve during development.
+
+1. General Architectural Quality
+
+   - Characteristics of Good Architecture:
+     - Maintain Conceptual Coherence
+     - Clearly State Objectives
+     - Explain Decision Rationale
+       - clear explanations for major decisions.
+     - Independence from Machine and Language
+       - aim for machine and language independence in the architecture.
+     - Balance Specification
+       - strive to find the right balance between underspecifying and overspecifying the system.
+     - Identify Risky Areas
+     - Multiple Views
+     - Ease of Understanding
 
 </details>

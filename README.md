@@ -64,9 +64,9 @@
 <img width="522" alt="Section-c 2" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/50b8d09b-528a-4d14-aace-87de6a59d8b4">
 
 | Title                                         |                Author                 | Last Updated |
-| --------------------------------------------- | :-----------------------------------: | :----------: |
+| --------------------------------------------- | :-----------------------------------: |:------------:|
 | CODE                                          |            Charles Petzold            |              |
-| [CODE COMPLETE](./Code_Complete.md)           |            Steve McConnell            |  09.09.2023  |
+| [CODE COMPLETE](./Code_Complete.md)           |            Steve McConnell            |  09.10.2023  |
 | Computer Architecture                         | John L. Hennessy, David A. Patterson  |              |
 | Computer Systems                              | Randal E. Bryant, David R. O'Hallaron |              |
 | [Clean Architecture](./Clean_Architecture.md) |          Robert Cecil Martin          |  05.28.2023  |
