@@ -12,7 +12,7 @@
 ## 📌 Table Format
 
 | Title      | Author     | Last Updated |
-| ---------- | ---------- | :----------: |
+|------------|------------|:------------:|
 | Book Title | AuthorName |  MM.DD.YYYY  |
 
 ### 📄 Table of Contents
@@ -47,6 +47,7 @@
 
   ```
   ├── The Elements of Computing Systems
+  ├── The Garbage Collection Handbook
   └── The Pragmatic Programmer
 
   ```
@@ -64,7 +65,7 @@
 <img width="522" alt="Section-c 2" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/50b8d09b-528a-4d14-aace-87de6a59d8b4">
 
 | Title                                         |                Author                 | Last Updated |
-| --------------------------------------------- | :-----------------------------------: |:------------:|
+|-----------------------------------------------|:-------------------------------------:|:------------:|
 | CODE                                          |            Charles Petzold            |              |
 | [CODE COMPLETE](./Code_Complete.md)           |            Steve McConnell            |  09.10.2023  |
 | Computer Architecture                         | John L. Hennessy, David A. Patterson  |              |
@@ -78,58 +79,59 @@
 
 <img width="500" alt="section-h" src="https://user-images.githubusercontent.com/48475824/162223490-9ec4ade7-d4ce-476a-9047-733c1ae10225.png">
 
-| Title       | Author | Last Updated |
-| ----------- | :----: | :----------: |
-| 함께 자라기 | 김창준 |              |
+| Title  | Author | Last Updated |
+|--------|:------:|:------------:|
+| 함께 자라기 |  김창준   |              |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## M
 
 <img width="500" alt="section-m" src="https://user-images.githubusercontent.com/48475824/147248669-27d6ab20-4cfb-4320-b99b-d4a3d97f0dbc.png">
 
 | Title                     |   Author   | Last Updated |
-| ------------------------- | :--------: | :----------: |
+|---------------------------|:----------:|:------------:|
 | Monolith to Microservices | San Newman |              |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## O
 
 <img width="500" alt="section-o" src="https://user-images.githubusercontent.com/48475824/147248892-3822c103-ae00-4594-a5b7-4213818717a2.png">
 
 | Title                                |           Author            | Last Updated |
-| ------------------------------------ | :-------------------------: | :----------: |
+|--------------------------------------|:---------------------------:|:------------:|
 | Operating System Concepts Essentials | Silberschatz, Galvin, Gagne |              |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## T
 
-<img width="500" alt="section-t" src="https://user-images.githubusercontent.com/48475824/208287009-21b50067-377f-4d86-b957-c6eedaedbc1d.png">
+<img width="500" alt="section-t" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/fd9710bc-8966-4ef6-80fb-c53d094dc88d">
 
-| Title                                                     |             Author             | Last Updated |
-| --------------------------------------------------------- | :----------------------------: | :----------: |
-| The Elements of Computing Systems                         | Noam Nisan and Shimon Schocken |              |
-| [The Pragmatic Programmer](./The_Pragmatic_Programmer.md) |     Andy Hunt, Dave Thomas     |  07.19.2023  |
+| Title                                                     |                  Author                   | Last Updated |
+|-----------------------------------------------------------|:-----------------------------------------:|:------------:|
+| The Elements of Computing Systems                         |      Noam Nisan and Shimon Schocken       |              |
+| The Garbage Collection Handbook                           | Richard Jones, Antony Hosking, Eliot Moss ||
+| [The Pragmatic Programmer](./The_Pragmatic_Programmer.md) |          Andy Hunt, Dave Thomas           |  07.19.2023  |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## S
 
 <img width="500" alt="section-s" src="https://user-images.githubusercontent.com/48475824/177133046-1d32787a-59a8-42a3-847e-d1ff87e4e224.png">
 
 | Title                                                                 |                     Author                     | Last Updated |
-| --------------------------------------------------------------------- | :--------------------------------------------: | :----------: |
+|-----------------------------------------------------------------------|:----------------------------------------------:|:------------:|
 | [Software Engineering at Google](./Software_Engineering_at_Google.md) | Hyrum Wright, Titus Winters, and Tom Manshreck |  01.15.2023  |
 | [System Design Interview](./System_Design_Interview.md)               |                    Alex Xu                     |  09.19.2021  |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## U
 
 <img width="500" alt="section-u" src="https://user-images.githubusercontent.com/48475824/150663091-89c9191d-5858-4a8f-aacd-13468dd2e717.png">
 
 | Title                           |       Author       | Last Updated |
-| ------------------------------- | :----------------: | :----------: |
+|---------------------------------|:------------------:|:------------:|
 | Understanding the Digital World | Brian W. Kernighan |              |
