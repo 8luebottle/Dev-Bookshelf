@@ -73,15 +73,15 @@
 | [Clean Architecture](./Clean_Architecture.md) |          Robert Cecil Martin          |  05.28.2023  |
 | [Clean Code](./Clean_Code.md)                 |          Robert Cecil Martin          |  08.29.2021  |
 
-[↑ return to TOC](#table-of-contents)
+[↑ return to TOC](#-table-of-contents)
 
 ## H
 
 <img width="500" alt="section-h" src="https://user-images.githubusercontent.com/48475824/162223490-9ec4ade7-d4ce-476a-9047-733c1ae10225.png">
 
-| Title  | Author | Last Updated |
-|--------|:------:|:------------:|
-| 함께 자라기 |  김창준   |              |
+| Title                 | Author | Last Updated |
+|-----------------------|:------:|:------------:|
+| [함께 자라기](./함께_자라기.md) |  김창준   |  10.20.2023  |
 
 [↑ return to TOC](#-table-of-contents)
 
