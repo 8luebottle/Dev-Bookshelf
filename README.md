@@ -30,6 +30,10 @@
   ```
   └── 함께 자라기
   ```
+- [I](#i)
+  ```
+  └── IT 인프라 구조
+  ```
 - [M](#m)
   ```
   └── Monolith to Microservices
@@ -84,6 +88,14 @@
 | [함께 자라기](./함께_자라기.md) |  김창준   |  10.21.2023  |
 
 [↑ return to TOC](#-table-of-contents)
+
+## I
+
+<img width="500" alt="section-i" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/8b139bac-3cac-4707-88d4-80f90fe9426b">
+
+| Title                      |                Author                | Last Updated |
+|----------------------------|:------------------------------------:|:------------:|
+| (그림으로 공부하는) <br> IT 인프라 구조 | 야마자키 야스시, 미나와 케이코, 아제카츠 요헤이, 사토 타카히코 |              |
 
 ## M
 
