@@ -42,6 +42,10 @@
   ```
   └── Operating System Concepts Essentials
   ```
+- [P](#p)
+  ```
+  └── Prompt Engineering Bible 
+  ``` 
 - [S](#s)
   ```
   ├── Software Engineering at Google
@@ -117,6 +121,16 @@
 
 [↑ return to TOC](#-table-of-contents)
 
+## P
+
+<img width="500" alt="section-p" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/4446384d-6e7f-4837-95fe-060ca3a9ff32">
+
+| Title                    |      Author      | Last Updated |
+|--------------------------|:----------------:|:------------:|
+| Prompt Engineering Bible | Robert E. Miller |              |
+
+[↑ return to TOC](#-table-of-contents)
+
 ## T
 
 <img width="500" alt="section-t" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/fd9710bc-8966-4ef6-80fb-c53d094dc88d">
@@ -124,7 +138,7 @@
 | Title                                                     |                  Author                   | Last Updated |
 |-----------------------------------------------------------|:-----------------------------------------:|:------------:|
 | The Elements of Computing Systems                         |      Noam Nisan and Shimon Schocken       |              |
-| The Garbage Collection Handbook                           | Richard Jones, Antony Hosking, Eliot Moss ||
+| The Garbage Collection Handbook                           | Richard Jones, Antony Hosking, Eliot Moss |              |
 | [The Pragmatic Programmer](./The_Pragmatic_Programmer.md) |          Andy Hunt, Dave Thomas           |  07.19.2023  |
 
 [↑ return to TOC](#-table-of-contents)
