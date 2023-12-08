@@ -65,6 +65,12 @@
   └── Understanding the Digital World
   ```
 
+- [W](#w)
+  ```
+  ├── Working Effectively with Legacy Code
+  └── 요즘 우아한 개발 
+  ```
+
 # 🗂 Sections
 
 ## C
@@ -164,8 +170,9 @@
 
 ## W
 
-<img width="500" alt="section-w" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/d715a970-59c1-43f9-8686-41af00c88eaf">
+<img width="500" alt="section-w" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/50600752-4d07-4eb9-b723-c50fdd6b7c2c">
 
-| Title     | Author  | Last Updated |
-|-----------|:-------:|:------------:|
-| 요즘 우아한 개발 | 우아한 형제들 |              |
+| Title                                |      Author       | Last Updated |
+|--------------------------------------|:-----------------:|:------------:|
+| Working Effectively with Legacy Code | Feathers, Michael |              |
+| 요즘 우아한 개발                            |      우아한 형제들      |              |
