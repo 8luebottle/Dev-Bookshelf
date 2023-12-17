@@ -17,6 +17,10 @@
 
 ### 📄 Table of Contents
 
+- [A](#a)
+  ```
+    └── API Design Patterns
+  ```
 - [C](#c)
   ```
   ├── CODE
@@ -72,6 +76,14 @@
   ```
 
 # 🗂 Sections
+
+## A
+
+<img width="500" alt="Section-A" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/ecea75e6-8e4e-4ef9-aaf1-c735dd2f1cc5">
+
+| Title               |  Author   | Last Updated |
+|---------------------|:---------:|:------------:|
+| API Design Patterns | JJ Geewax |              |
 
 ## C
 
