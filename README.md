@@ -40,6 +40,7 @@
   ```
 - [M](#m)
   ```
+  ├── Modern Operating Systems
   └── Monolith to Microservices
   ```
 - [O](#o)
@@ -121,11 +122,12 @@
 
 ## M
 
-<img width="500" alt="section-m" src="https://user-images.githubusercontent.com/48475824/147248669-27d6ab20-4cfb-4320-b99b-d4a3d97f0dbc.png">
+<img width="500" alt="section-m" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/1aabfd95-26da-4b08-a516-f2e4ea1d8179">
 
-| Title                     |   Author   | Last Updated |
-|---------------------------|:----------:|:------------:|
-| Monolith to Microservices | San Newman |              |
+| Title                     |            Author             | Last Updated |
+|---------------------------|:-----------------------------:|:------------:|
+| Modern Operating Systems  | Andrew Tanenbaum, Herbert Bos |              |
+| Monolith to Microservices |          San Newman           |              |
 
 [↑ return to TOC](#-table-of-contents)
 
