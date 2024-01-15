@@ -53,6 +53,7 @@
   ``` 
 - [S](#s)
   ```
+  ├── Seven Databases in Seven Weeks
   ├── Software Engineering at Google
   └── System Design Interview
   ```
@@ -165,10 +166,11 @@
 
 ## S
 
-<img width="500" alt="section-s" src="https://user-images.githubusercontent.com/48475824/177133046-1d32787a-59a8-42a3-847e-d1ff87e4e224.png">
+<img width="500" alt="section-s" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/d11db2ec-ea1d-4ac9-97d1-4ac73f562603">
 
 | Title                                                                 |                     Author                     | Last Updated |
 |-----------------------------------------------------------------------|:----------------------------------------------:|:------------:|
+| Seven Databases in Seven Weeks                                        |     Luc Perkins, Eric Redmond, Jim Wilson      |              |
 | [Software Engineering at Google](./Software_Engineering_at_Google.md) | Hyrum Wright, Titus Winters, and Tom Manshreck |  01.15.2023  |
 | [System Design Interview](./System_Design_Interview.md)               |                    Alex Xu                     |  09.19.2021  |
 
