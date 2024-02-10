@@ -30,6 +30,9 @@
   ├── Clean Architecture
   └── Clean Code
   ```
+- [D](#d)
+  ```
+  └── Designing Data-Intensive Applications
 - [H](#h)
   ```
   └── 함께 자라기
@@ -102,6 +105,14 @@
 | [Clean Code](./Clean_Code.md)                 |          Robert Cecil Martin          |  08.29.2021  |
 
 [↑ return to TOC](#-table-of-contents)
+
+## D
+
+<img width="500" alt="Section-D" src="https://github.com/8luebottle/Dev-Bookshelf/assets/48475824/69ee1f6e-1f3a-4988-b55c-ed7891071f05">
+
+| Title                                 |      Author      | Last Updated |
+|---------------------------------------|:----------------:|:------------:|
+| Designing Data-Intensive Applications | Martin Kleppmann |              |
 
 ## H
 
